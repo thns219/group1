@@ -1,0 +1,390 @@
+body {
+    font-family:'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo {
+    max-width: 100px;
+    border-radius: 50%; /* logo tròn */
+    cursor: pointer; /* Đổi con trỏ thành bàn tay khi rê chuột */
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+}
+
+.search-bar input {   /*nhập từ khóa tìm kiếm*/
+    padding: 5px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border-radius: 7px;
+    font-family: 'Playfair Display', serif;
+
+
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #5a5959;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 16px;
+        font-family: 'Playfair Display', serif;
+
+
+}
+
+.auth-buttons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.auth-buttons a:hover {
+    background-color: #b7b3b3;
+}
+
+nav {
+    background-color: #aeacac;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Phần dropdown (menu thả xuống) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Nút "Sản Phẩm" */
+.dropdown-btn {
+    color: blackblack;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Dấu mũi tên */
+.arrow {
+    font-size: 14px;
+    margin-left: 5px; /* Khoảng cách giữa chữ và dấu mũi tên */
+}
+
+/* Khi di chuột vào "Sản Phẩm" */
+.dropdown:hover .dropdown-btn {
+    background-color: #555;
+}
+
+/* Menu thả xuống */
+.dropdown-content {
+    display: none; /* Ẩn menu thả xuống mặc định */
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Các mục trong menu thả xuống */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+/* Hiển thị menu khi di chuột vào dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start; /* đảm bảo mọi thứ bắt đầu từ trên */
+    margin: 20px;
+    gap: 20px; /* tạo khoảng cách giữa cột và sidebar */
+}
+
+
+.products {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Tạo khoảng cách giữa tiêu đề và sản phẩm */
+}
+.vertical-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px;
+    padding: 10px 0;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 50px; /* để giữ layout không bị thu hẹp quá */
+}
+
+.vertical-title span {
+    margin-bottom: 5px;
+}
+
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center; /* căn lề giữa*/
+    width : 240px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+}
+
+.product h3 {   /* mô tả sp */
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.product a { /*phần sản phẩm*/
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+p{
+
+    color:#e74c3c;
+    font-weight: bold; /*in đậm*/
+    padding: 0px 5px 0px 0px;
+    
+
+}
+
+.product a:hover {
+    background-color: #555;
+}
+
+/* Sidebar */
+.sidebar {  /* danh mục */
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 1010px rgba(0, 0, 0, 0.1);
+    font-size : 18px;
+    height:20px;
+
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    color: #007BFF;
+}
+
+/* Màu sắc khác biệt cho các nút đã chọn */
+.pagination a.active {
+    background-color: #007BFF;
+}
+
+.pagination a.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    margin-top: 20px; /* Tạo khoảng cách giữa sản phẩm và phân trang */
+    margin-bottom: 20px; /* Tạo khoảng cách dưới phân trang */
+}
+
+.pagination a {
+    padding: 8px 16px;
+    margin: 0 5px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pagination a:hover {
+    background-color: #555;
+}
+
+.pagination .prev, .pagination .next {
+    font-weight: bold;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #a51111;
+    margin-top: 20px;
+    font-weight: 600; /* in đậm */
+
+}
+
+footer p {
+    margin: 5px 0;
+}
+#Shopping-Cart{
+    background-image: none; 
+    width :40px;
+    height: 40px;
+    border-radius: 50%;
+    padding : 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Phần Tin Tức */
+.news-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Áp dụng bóng cho phần Tin Tức */
+}
+
+.news-section h2 {
+    background-color: #333;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center; /* Căn giữa tiêu đề */
+    font-weight: bold;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.news-item:hover {
+    background-color: #e9ecef; /* Hiệu ứng hover với màu nền sáng hơn */
+}
+
+.news-item h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.news-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    background-color: #555;
+}
+
+img{
+    border-radius: 10%;
+    text-align: center; /* Căn giữa tiêu đề */
+
+}
+
+
+
+
+

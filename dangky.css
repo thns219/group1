@@ -1,0 +1,89 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #f4f4f4;
+    padding: 5px;
+  }
+  
+  form {
+    width: 380px;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center; /* căn giữa*/
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .Section-name {
+    background: linear-gradient(to right, #555555, #777777);
+    padding: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .Section {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  /*căn lề */
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* zãn hàng */
+    
+  }
+  /* yêu cầu */
+  label {
+    width: 150px;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  input {
+    flex: 1;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    transition: all 0.3s ease;
+  }
+  
+  .bat-buoc {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:#5a5959;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  .button-dangky {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .radio-nam, .radio-nu {
+    width: 25px;
+    height: 20px;
+    background-color: #f4f4f4;
+  }

@@ -1,0 +1,71 @@
+/* Tổng quan */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background: linear-gradient(to right,#555555, #777777);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form đăng nhập */
+  form {
+    width: 300px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  /* Tiêu đề */
+  .login-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333;
+    text-transform: uppercase; /* in hoa */
+  }
+  
+  /* Input */
+  input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px; /* chỉnh khung*/
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+
+  /* Checkbox */
+  .remember-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #555555, #777777);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right,  #555555, #777777);
+    box-shadow: 0 4px 8px rgba(37, 117, 252, 0.3);
+  }
+  

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8"> <!--hỗ trợ tiếng việt-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP DUNG CU CAU LONG SPORTS </title>
+    <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.avif" alt="Logo" class="logo">
+        <i class="fas fa-store" style="font-size: 5rem; color: rgb(16, 16, 16); margin-right: 10px;"></i>
+        <h1 class="custom-title">GROUP1 SPORTS</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Nhập từ khóa tìm kiếm...">
+            <button type="submit">Tìm kiếm</button>
+            <a href="giohang.html"><img src="images/gio.png" alt="Giỏ" id="Shopping-Cart"></a>
+        </div>
+        <div class="auth-buttons">
+            <a href="dangnhap.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+        </div>
+    </header>
+   
+
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <!-- Menu thả xuống cho Sản Phẩm -->
+        <div class="dropdown">
+            <a href="#" class="dropdown-btn">Sản Phẩm <span class="arrow">&#9662;</span></a> <!-- Dấu mũi tên xuống -->
+        <div class="dropdown-content">
+            <a href="#">Giày Cầu Lông</a>
+            <a href="#">Áo Cầu Lông</a>
+            <a href="#">Vợt Cầu Lông</a>
+            <a href="#">Phụ Kiện</a>
+        </div>
+    </div>
+        <a href="#">Khuyến Mại</a>
+        <a href="#">Giỏ Hàng</a>
+        <a href="#">Liên Hệ</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="vertical-title">
+            <span>S</span>
+            <span>Ả</span>
+            <span>N</span>
+            <span>P</span>
+            <span>H</span>
+            <span>Ẩ</span>
+            <span>M</span>
+        </div>
+    <!-- Danh sách sản phẩm -->
+    <div class="product">
+        <h3>Vợt Yonex Astrox 99</h3>
+        <p>Giá: 3.000.000 VND</p>
+        <button onclick="addToCart('Vợt Yonex Astrox 99', 3000000)">Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+        <h3>Giày cầu lông Mizuno Wave</h3>
+        <p>Giá: 1.800.000 VND</p>
+        <button onclick="addToCart('Giày Mizuno Wave', 1800000)">Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+        <h3>Áo thi đấu Victor</h3>
+        <p>Giá: 450.000 VND</p>
+        <button onclick="addToCart('Áo thi đấu Victor', 450000)">Thêm vào giỏ</button>
+    </div>
+
+    <!-- Giỏ hàng -->
+    <div class="cart">
+        <h2>🛒 Giỏ hàng của bạn</h2>
+        <ul id="cart-items">
+            <li>Chưa có sản phẩm trong giỏ.</li>
+        </ul>
+        <p><strong>Tổng cộng:</strong> <span id="total">0</span> VND</p>
+
+        <!-- Nút Đặt hàng -->
+        <button onclick="placeOrder()">Đặt hàng</button>
+    </div>
+
+    <script>
+        let cart = [];
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartList = document.getElementById('cart-items');
+            const totalSpan = document.getElementById('total');
+            cartList.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = '<li>Chưa có sản phẩm trong giỏ.</li>';
+            } else {
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = "cart-item";
+                    li.textContent = `${item.name} - ${item.price.toLocaleString()} VND × ${item.quantity}`;
+                    cartList.appendChild(li);
+                    total += item.price * item.quantity;
+                });
+            }
+
+            totalSpan.textContent = total.toLocaleString();
+        }
+
+        function placeOrder() {
+            if (cart.length === 0) {
+                alert("Bạn chưa có sản phẩm nào trong giỏ hàng!");
+            } else {
+                let summary = "Bạn đã đặt các sản phẩm sau:\n";
+                cart.forEach(item => {
+                    summary += `- ${item.name} x${item.quantity}\n`;
+                });
+                summary += `Tổng cộng: ${document.getElementById("total").textContent} VND`;
+                alert(summary);
+            }
+        }
+    </script>
+
+</body>
+<a href="template.html" title="Quay lại">⬅ Quay lại trang sản phẩm</a>
+
+</html>
